@@ -10,17 +10,19 @@ import 'tailwindcss/tailwind.css';
 
 function App() {
   return (
-    <div>
-      <Router>
+    <Router>
+      <div>
         <Sidenav />
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Main />} />
+          <ROute path='/portfolio' element={<Main />} />
+          {/* Add your other routes here */}
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
