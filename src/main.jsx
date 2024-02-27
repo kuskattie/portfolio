@@ -12,9 +12,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="main" element={<Home/>} />
-        <Route path="projects" element={<Projects/>} />
-        <Route path="contact" element={<Contact/>} />
+        <App />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

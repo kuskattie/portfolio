@@ -11,16 +11,13 @@ import 'tailwindcss/tailwind.css';
 function App() {
   return (
     <Router basename='/portfolio/'>
-      <div>
-        <Sidenav />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/home" element={<Home />} />
-          {/* Add your other routes here */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<React.Fragment><Sidenav /><Main /></React.Fragment>} />
+        <Route path="/contact" element={<React.Fragment><Sidenav /><Contact /></React.Fragment>} />
+        <Route path="/projects" element={<React.Fragment><Sidenav /><Projects /></React.Fragment>} />
+        <Route path="/home" element={<React.Fragment><Sidenav /><Home /></React.Fragment>} />
+        {/* Add your other routes here */}
+      </Routes>
     </Router>
   );
 }
